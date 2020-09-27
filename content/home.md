@@ -14,3 +14,5 @@ Welcome to my awesome page about cats of the internet.
 This page is built with NextJS, and content is managed in Netlify CMS. 
 
 test
+
+![Foo](/img/64485670c60b403bad2155c5741c3f15-preview.jpg "Foo bar")
