@@ -1,7 +1,6 @@
 const resolveTsconfigPathsToAlias = require('./resolve-tsconfig-path-to-webpack-alias');
-const withSass = require('@zeit/next-sass');
 
-module.exports = withSass({
+module.exports = {
   webpack: cfg => {
     cfg.plugins = cfg.plugins || [];
 
@@ -24,4 +23,4 @@ module.exports = withSass({
 
     return cfg;
   }
-});
+};

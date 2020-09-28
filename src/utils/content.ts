@@ -6,5 +6,5 @@ export const getContent = <AttributesT = any>(
   locale?: Locale
 ): Content<AttributesT> =>
   locale
-    ? require(`@content/${collection}/${locale}/${slug}.md`)
-    : require(`@content/${collection}/${slug}.md`);
+    ? require(`content/${collection}/${locale}/${slug}.md`)
+    : require(`content/${collection}/${slug}.md`);

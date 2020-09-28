@@ -15,17 +15,19 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@layouts/*": ["layouts/*"],
-      "@interfaces/*": ["interfaces/*"],
-      "@hocs/*": ["hocs/*"],
-      "@content/*": ["content/*"],
-      "@utils/*": ["utils/*"]
+      "content/*": ["content/*"],
+      "core/*": ["src/core/*"],
+      "hooks/*": ["src/hooks/*"],
+      "config/*": ["src/config/*"],
+      "content/*": ["content/*"],
+      "components/*": ["src/components/*"],
+      "layouts/*": ["src/layouts/*"],
+      "types/*": ["src/types/*"],
+      "utils/*": ["src/utils/*"],
+      "styles/*": ["src/styles/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./@types"],
-    "baseUrl": "./src"
+    "typeRoots": ["./node_modules/@types", "./@types"]
   },
-  "paths": { "@content/*": ["content/*"] },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
