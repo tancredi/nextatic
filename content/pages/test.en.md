@@ -1,4 +1,4 @@
 ---
-title: Test
+title: Home
 ---
 Content
