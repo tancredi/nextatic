@@ -1,27 +1,27 @@
-const resolveTsconfigPathsToAlias = require('./resolve-tsconfig-path-to-webpack-alias')
+const resolveTsconfigPathsToAlias = require('./resolve-tsconfig-path-to-webpack-alias');
+const withSass = require('@zeit/next-sass');
 
-module.exports = {
-  webpack: (cfg) => {
-    cfg.plugins = cfg.plugins || []
+module.exports = withSass({
+  webpack: cfg => {
+    cfg.plugins = cfg.plugins || [];
 
     cfg.resolve.alias = {
       ...cfg.resolve.alias,
-      ...resolveTsconfigPathsToAlias(),
-    }
+      ...resolveTsconfigPathsToAlias()
+    };
 
-    cfg.plugins = [
-      ...cfg.plugins,]
+    cfg.plugins = [...cfg.plugins];
 
-    cfg.module.rules.push(
-      {
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        options: { mode: ['react-component'] }
-      }
-    )
+    cfg.module.rules.push({
+      test: /\.md$/,
+      loader: 'frontmatter-markdown-loader',
+      options: { mode: ['react-component'] }
+    });
 
-    cfg.plugins = cfg.plugins.filter(plugin => plugin.constructor.name !== 'ForkTsCheckerWebpackPlugin')
+    cfg.plugins = cfg.plugins.filter(
+      plugin => plugin.constructor.name !== 'ForkTsCheckerWebpackPlugin'
+    );
 
     return cfg;
   }
-}
+});

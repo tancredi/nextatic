@@ -1,4 +1,5 @@
 ---
-title: Home
+title: Page title (en)
 ---
-en content
+
+Page content (en)
