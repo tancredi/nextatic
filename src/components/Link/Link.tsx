@@ -16,8 +16,6 @@ const Link: FunctionComponent<Props> = props => {
     overrides.as = `/${locale}${as || href}`;
   }
 
-  console.log(overrides);
-
   return <NextLink {...props} {...overrides} />;
 };
 
