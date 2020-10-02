@@ -2,7 +2,7 @@ import React from 'react';
 import { NextPage, GetStaticProps } from 'next';
 import { getContent } from 'utils/content';
 import { Locale } from 'types/app';
-import { DEFAULT_PAGE_SLUG } from 'config/constants';
+import { DEFAULT_PAGE_SLUG, DEFAULT_LOCALE } from 'config/constants';
 import Section from 'components/Section/Section';
 import PageSize from 'components/PageSize/PageSize';
 import DefaultLayout from 'layouts/default';
@@ -32,10 +32,10 @@ const Page: NextPage<Props> = ({ slug, locale }) => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({
-  params: { locale, slug }
+  params: { locale, slug } = {}
 }) => ({
   props: {
-    locale: locale as Locale,
+    locale: (locale as Locale) || DEFAULT_LOCALE,
     slug: (slug as string) || DEFAULT_PAGE_SLUG
   }
 });
