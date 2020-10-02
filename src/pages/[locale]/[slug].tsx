@@ -42,6 +42,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({
 
 export default Page;
 
-export const getStaticPaths = localisedStaticPathsGetter([
-  { slug: DEFAULT_PAGE_SLUG }
-]);
+export const getStaticPaths = localisedStaticPathsGetter(() =>
+  require('utils/server/')
+    .getContentList('pages', true)
+    .map((slug: string) => ({ slug }))
+);

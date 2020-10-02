@@ -2,10 +2,12 @@ import { GetStaticPaths } from 'next';
 import { LOCALES } from 'config/constants';
 
 export const localisedStaticPathsGetter = (
-  paramSets: Object[],
+  getParamSets: Object[] | (() => Promise<Object[]>),
   fallback = false
 ): GetStaticPaths => async () => {
   const paths = [];
+  const paramSets =
+    typeof getParamSets === 'function' ? await getParamSets() : getParamSets;
 
   for (const params of paramSets) {
     for (const locale of LOCALES) {
