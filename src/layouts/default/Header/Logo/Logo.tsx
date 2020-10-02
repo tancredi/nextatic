@@ -8,7 +8,7 @@ export const Logo = () => {
   return (
     <Link href="/">
       <a className={styles.logo}>
-        {logo ? <img src={logo} title={brandName} /> : brandName}
+        {logo ? <img src={`/${logo}`} title={brandName} /> : brandName}
       </a>
     </Link>
   );

@@ -32,21 +32,51 @@ collections:
         name: 'navigation'
         file: 'content/settings/navigation.yml'
         fields:
-          - label: 'Header links'
+          - label: 'Header navigation'
             name: header
             label_singular: 'Header link'
             widget: list
             fields:
-              - { label: 'label', name: Label, widget: string }
-              - { label: 'destination', name: Destination, widget: string }
+              - label: Label
+                name: Label
+                widget: string
+                i18n: true
 
-          - label: 'Footer links'
+              - label: Page
+                name: page
+                widget: relation
+                collection: pages
+                required: false
+                value_field: '{{slug}}'
+                search_fields: ['name']
+
+              - label: Link
+                name: href
+                widget: string
+                required: false
+
+          - label: 'Footer navigation'
             name: footer
             label_singular: 'Footer link'
             widget: list
             fields:
-              - { label: 'label', name: Label, widget: string }
-              - { label: 'destination', name: Destination, widget: string }
+              - label: Label
+                name: Label
+                widget: string
+                i18n: true
+
+              - label: Page
+                name: page
+                widget: relation
+                collection: pages
+                required: false
+                value_field: '{{slug}}'
+                search_fields: ['name']
+
+              - label: Link
+                name: href
+                widget: string
+                required: false
 
   - name: pages
     label: 'Pages'
