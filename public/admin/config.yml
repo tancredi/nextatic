@@ -13,15 +13,24 @@ collections:
     files:
       - label: 'General'
         name: 'general'
-        file: 'site/content/settings/general.yml'
+        file: 'content/settings/general.yml'
         fields:
-          - { label: 'Brand name', name: brand, widget: string }
-          - { label: 'Logo', name: logo, widget: 'image' }
-          - { label: 'Base page title', name: title, widget: string }
+          - label: Brand name
+            name: brand
+            widget: string
+
+          - label: Logo
+            name: logo
+            widget: image
+            required: false
+
+          - label: Base page title
+            name: title
+            widget: string
 
       - label: 'Navigation'
         name: 'navigation'
-        file: 'site/content/settings/navigation.yml'
+        file: 'content/settings/navigation.yml'
         fields:
           - label: 'Header links'
             name: header
@@ -29,7 +38,7 @@ collections:
             widget: list
             fields:
               - { label: 'label', name: Label, widget: string }
-              - { label: 'slug', name: Destination, widget: string }
+              - { label: 'destination', name: Destination, widget: string }
 
           - label: 'Footer links'
             name: footer
@@ -37,7 +46,7 @@ collections:
             widget: list
             fields:
               - { label: 'label', name: Label, widget: string }
-              - { label: 'slug', name: Destination, widget: string }
+              - { label: 'destination', name: Destination, widget: string }
 
   - name: pages
     label: 'Pages'

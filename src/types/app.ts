@@ -1,8 +1,5 @@
-import { ComponentType } from 'react'
+import { ComponentType } from 'react';
 
-export type Locale = string
+export type Locale = string;
 
-export interface Content<AttributesT = any> {
-  react: ComponentType
-  attributes: AttributesT
-}
+export type Content<T = any> = { react: ComponentType; attributes: T } | T;

@@ -23,7 +23,6 @@ const Page: NextPage<Props> = ({ slug, locale }) => {
       <Section>
         <PageSize>
           <h1>{title}</h1>
-
           <HomeContent />
         </PageSize>
       </Section>
