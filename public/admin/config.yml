@@ -8,13 +8,46 @@ i18n:
   locales: [en, it]
   default_locale: en
 collections:
+  - name: settings
+    label: 'Settings'
+    files:
+      - label: 'General'
+        name: 'general'
+        file: 'site/content/settings/general.yml'
+        fields:
+          - { label: 'Brand name', name: brand, widget: string }
+          - { label: 'Logo', name: logo, widget: 'image' }
+          - { label: 'Base page title', name: title, widget: string }
+
+      - label: 'Navigation'
+        name: 'navigation'
+        file: 'site/content/settings/navigation.yml'
+        fields:
+          - label: 'Header links'
+            name: header
+            label_singular: 'Header link'
+            widget: list
+            fields:
+              - { label: 'label', name: Label, widget: string }
+              - { label: 'slug', name: Destination, widget: string }
+
+          - label: 'Footer links'
+            name: footer
+            label_singular: 'Footer link'
+            widget: list
+            fields:
+              - { label: 'label', name: Label, widget: string }
+              - { label: 'slug', name: Destination, widget: string }
+
   - name: pages
     label: 'Pages'
     label_singular: 'Page'
     i18n: true
     folder: content/pages
+    identifier_field: name
     create: true
     fields:
+      - { label: 'Name', name: name, widget: string }
       - { label: 'Title', name: title, widget: string, i18n: true }
       - { label: 'Publish Date', name: date, widget: datetime }
-      - { label: 'Body', name: body, widget: markdown }
+      - { label: 'Body', name: body, widget: markdown, i18n: true }
