@@ -1,5 +1,5 @@
 ---
-title: Page title (it)
+title: Benvenuti
+date: 2020-10-02T16:40:01.443Z
 ---
-
-Page content (it)
+Questa e' la home page
