@@ -21,6 +21,8 @@ module.exports = {
       plugin => plugin.constructor.name !== 'ForkTsCheckerWebpackPlugin'
     );
 
+    cfg.module.rules.push({ test: /\.ya?ml$/, use: 'js-yaml-loader' });
+
     return cfg;
   }
 };

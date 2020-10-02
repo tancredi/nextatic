@@ -24,7 +24,8 @@
       "layouts/*": ["src/layouts/*"],
       "types/*": ["src/types/*"],
       "utils/*": ["src/utils/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "public/*": ["public/*"]
     },
     "typeRoots": ["./node_modules/@types", "./@types"]
   },
