@@ -8,5 +8,9 @@ export type NavigationLink = {
   href?: string;
 };
 
-export const getHeaderNavigation = (locale: Locale = DEFAULT_LOCALE) =>
-  getContent<NavigationLink[]>('settings', 'navigation', locale, 'yml');
+export interface Navigation {
+  links: NavigationLink[];
+}
+
+export const getNavigation = (name: string, locale: Locale = DEFAULT_LOCALE) =>
+  getContent<Navigation>('navigation', name, locale, 'yml');

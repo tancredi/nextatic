@@ -1,12 +1,14 @@
 import { ReactNode, FunctionComponent } from 'react';
 import styles from './PageSize.module.sass';
+import classNames from 'classnames';
 
 interface Props {
   children?: ReactNode;
+  className?: string;
 }
 
-const PageSize: FunctionComponent<Props> = ({ children }) => (
-  <div className={styles.main}>{children}</div>
+const PageSize: FunctionComponent<Props> = ({ children, className }) => (
+  <div className={classNames(styles.main, className)}>{children}</div>
 );
 
 export default PageSize;

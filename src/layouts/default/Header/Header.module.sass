@@ -2,4 +2,21 @@
 
 .main
   padding: 30px 0
-  background: $color-header
+  border-bottom: 1px solid $color-ruler
+
+.inner
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+  nav
+    display: flex
+
+    a
+      color: $color-text
+      text-decoration: none
+      transition: color .2s
+
+      &:hover
+        color: $color-link

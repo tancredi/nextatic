@@ -11,9 +11,11 @@ const NavigationLinks: FunctionComponent<Props> = ({ links, className }) => (
   <nav className={className}>
     {links.map(({ label, page, href }, i) => {
       if (page) {
-        <Link href="/[slug]" as={`/${page}`} key={i}>
-          <a>{label}</a>
-        </Link>;
+        return (
+          <Link href="/[slug]" as={`/${page}`} key={i}>
+            <a>{label}</a>
+          </Link>
+        );
       }
 
       return (
