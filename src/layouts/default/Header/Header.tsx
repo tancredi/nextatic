@@ -2,16 +2,18 @@ import { FunctionComponent } from 'react';
 import PageSize from 'components/PageSize/PageSize';
 import styles from './Header.module.sass';
 import Link from 'components/Link/Link';
-import { getContent } from 'utils/content';
+import { getGeneralSettings } from 'models/settings';
 
 const Header: FunctionComponent = () => {
-  const generalSettings = getContent('settings', 'general', null, 'yml');
+  const generalSettings = getGeneralSettings();
 
   return (
     <header className={styles.main}>
       <PageSize>
         <Link href="/">
-          <a className={styles.logo}>{generalSettings.brand || 'My brand'}</a>
+          <a className={styles.logo}>
+            {generalSettings.brandName || 'My brand'}
+          </a>
         </Link>
       </PageSize>
     </header>

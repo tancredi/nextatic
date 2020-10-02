@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import { AppProps } from 'next/app';
 import { Locale } from 'types/app';
 import pageContext from 'core/page-context';
-import { DEFAULT_LOCALE } from 'config/constants';
+import { DEFAULT_LOCALE } from 'core/config';
 import 'styles/main.sass';
 
 const MyApp: FunctionComponent<AppProps> = ({

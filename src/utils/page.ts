@@ -1,5 +1,5 @@
 import { GetStaticPaths } from 'next';
-import { LOCALES } from 'config/constants';
+import { LOCALES } from 'core/config';
 
 export const localisedStaticPathsGetter = (
   getParamSets: Object[] | (() => Promise<Object[]>),

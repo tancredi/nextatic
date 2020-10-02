@@ -1,5 +1,5 @@
 import { readdirSync } from 'fs';
-import { DEFAULT_LOCALE } from 'config/constants';
+import { DEFAULT_LOCALE } from 'core/config';
 import { extname, basename } from 'path';
 
 export const getContentList = (collection: string, localised = false) =>

@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "content/*": ["content/*"],
+      "public/*": ["public/*"],
+
+      "models/*": ["src/models/*"],
       "core/*": ["src/core/*"],
       "hooks/*": ["src/hooks/*"],
       "config/*": ["src/config/*"],
@@ -24,8 +27,7 @@
       "layouts/*": ["src/layouts/*"],
       "types/*": ["src/types/*"],
       "utils/*": ["src/utils/*"],
-      "styles/*": ["src/styles/*"],
-      "public/*": ["public/*"]
+      "styles/*": ["src/styles/*"]
     },
     "typeRoots": ["./node_modules/@types", "./@types"]
   },

@@ -1,5 +1,5 @@
-import { DEFAULT_LOCALE } from 'config/constants';
-import { Locale, Content } from 'types/app';
+import { DEFAULT_LOCALE } from 'core/config';
+import { Locale } from 'types/app';
 
 const BASE_LOCALE = DEFAULT_LOCALE;
 
@@ -14,12 +14,12 @@ const merge = (a: any, b: any) => {
   return { ...a, ...b };
 };
 
-export const getContent = <AttributesT = any>(
+export const getContent = <T>(
   collection: string,
   slug: string,
   locale?: Locale | null,
   extension = 'md'
-): Content<AttributesT> => {
+): T => {
   if (locale) {
     return merge(
       require(`content/${collection}/${BASE_LOCALE}/${slug}.${extension}`),
