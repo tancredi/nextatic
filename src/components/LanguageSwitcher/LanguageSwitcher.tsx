@@ -23,7 +23,7 @@ const LanguageSwitcher: FunctionComponent<Props> = ({ onClick }) => {
         const localisedAs = asPath.replace(`/${currentLocale}`, `/${locale}`);
 
         return (
-          <Link href={pathname} as={localisedAs} key={locale} localised={false}>
+          <Link href={pathname} as={localisedAs} key={locale}>
             <a onClick={onClick}>{info ? info.nativeName : locale}</a>
           </Link>
         );

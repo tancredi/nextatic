@@ -1,8 +1,4 @@
-.next/
-node_modules/
-/npm-debug.log
-.DS_Store
-out/
-
-# Editors
-.idea
+.next
+node_modules
+npm-*.log
+dist
