@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import styles from './Header.module.scss';
 import { getNavigation } from 'models/navigation';
 import useLocale from 'hooks/useLocale';
-import NavigationLinks from 'components/NavigationLinks/NavigationLinks';
+import Navigation from 'components/Navigation/Navigation';
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 import Hamburger from './Hamburger/Hamburger';
 import Logo from './Logo/Logo';
@@ -20,7 +20,8 @@ const Header: FunctionComponent = () => {
         <Logo />
 
         <nav>
-          <NavigationLinks
+          <Navigation
+            activeClassName={styles.active}
             links={getNavigation('header', useLocale()).links}
             onClick={close}
           />

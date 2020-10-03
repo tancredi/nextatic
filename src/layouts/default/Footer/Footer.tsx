@@ -3,7 +3,7 @@ import PageSize from 'components/PageSize/PageSize';
 import styles from './Footer.module.scss';
 import { getNavigation } from 'models/navigation';
 import { getGeneralSettings } from 'models/settings';
-import NavigationLinks from 'components/NavigationLinks/NavigationLinks';
+import Navigation from 'components/Navigation/Navigation';
 
 interface Props {}
 
@@ -18,7 +18,7 @@ const Footer: FunctionComponent<Props> = ({}) => {
         <div className={styles.copy}>{copyright}</div>
 
         <nav>
-          <NavigationLinks links={links} />
+          <Navigation activeClassName={styles.active} links={links} />
         </nav>
       </PageSize>
     </footer>

@@ -27,6 +27,11 @@
       &:hover {
         color: $color-link;
       }
+
+      &.active {
+        opacity: 0.5;
+        color: $color-text;
+      }
     }
   }
 

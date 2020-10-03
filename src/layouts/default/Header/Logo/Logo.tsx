@@ -1,4 +1,4 @@
-import Link from 'components/Link/Link';
+import LocalisedLink from 'components/Link/LocalisedLink';
 import { getGeneralSettings } from 'models/settings';
 import styles from './Logo.module.scss';
 
@@ -6,11 +6,11 @@ export const Logo = () => {
   const { logo, brandName } = getGeneralSettings();
 
   return (
-    <Link href="/">
+    <LocalisedLink href="/">
       <a className={styles.logo}>
         {logo ? <img src={`/${logo}`} title={brandName} /> : brandName}
       </a>
-    </Link>
+    </LocalisedLink>
   );
 };
 
