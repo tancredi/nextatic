@@ -5,13 +5,14 @@ import styles from './Header.module.scss';
 import { getNavigation } from 'models/navigation';
 import useLocale from 'hooks/useLocale';
 import NavigationLinks from 'components/NavigationLinks/NavigationLinks';
-import LanguageSelection from 'components/LanguageSelection/LanguageSelection';
+import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 import Hamburger from './Hamburger/Hamburger';
 import Logo from './Logo/Logo';
 
 const Header: FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = (state = !isOpen) => setIsOpen(state);
+  const toggle = () => setIsOpen(!isOpen);
+  const close = () => setIsOpen(false);
 
   return (
     <header className={classNames(styles.header, { [styles.open]: isOpen })}>
@@ -21,14 +22,15 @@ const Header: FunctionComponent = () => {
         <nav>
           <NavigationLinks
             links={getNavigation('header', useLocale()).links}
-            onClick={() => toggle(false)}
+            onClick={close}
           />
-          <LanguageSelection />
+
+          <LanguageSwitcher onClick={close} />
         </nav>
 
         <Hamburger
           isOpen={isOpen}
-          onClick={() => toggle()}
+          onClick={toggle}
           className={styles.hamburger}
         />
       </PageSize>
