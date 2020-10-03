@@ -19,7 +19,20 @@ const ContactsPage: FunctionComponent<PageComponentProps> = ({
     </Section>
 
     <Section alternate>
-      <PageSize>Some custom component goes here</PageSize>
+      <PageSize>
+        <p>Example of a page rendered with a custom component.</p>
+
+        <p>
+          You can find this component in{' '}
+          <code>src/components/page-components/ContactsPage.tsx</code>.
+        </p>
+
+        <p>
+          In order to associate it to a <code>Page</code> entry from the CMS,
+          edit the components map in{' '}
+          <code>src/components/page-components/index.ts</code>.
+        </p>
+      </PageSize>
     </Section>
   </>
 );
