@@ -4,21 +4,22 @@ import Link from 'components/Link/Link';
 
 interface Props {
   links: NavigationLink[];
+  onClick?: () => void;
 }
 
-const NavigationLinks: FunctionComponent<Props> = ({ links }) => (
+const NavigationLinks: FunctionComponent<Props> = ({ links, onClick }) => (
   <>
     {links.map(({ label, page, href }, i) => {
       if (page) {
         return (
           <Link href="/[slug]" as={`/${page}`} key={i}>
-            <a>{label}</a>
+            <a onClick={onClick}>{label}</a>
           </Link>
         );
       }
 
       return (
-        <a href={href} target="_blank" key={i}>
+        <a href={href} target="_blank" key={i} onClick={onClick}>
           {label}
         </a>
       );

@@ -1,0 +1,57 @@
+@import 'styles/variables.scss';
+
+.footer {
+  background: $color-black;
+  padding: 50px 0;
+  color: $color-white;
+
+  .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+      margin-left: 40px;
+      transition: color 0.2s;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        color: $color-link;
+      }
+    }
+  }
+
+  .copy {
+    opacity: 0.5;
+    font-size: 14px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .inner {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav a,
+    .copy {
+      margin: 10px 0;
+    }
+  }
+}

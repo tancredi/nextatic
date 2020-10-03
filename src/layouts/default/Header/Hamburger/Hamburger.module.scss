@@ -1,0 +1,95 @@
+@import 'styles/variables.scss';
+
+$width: 28px;
+$height: $width / 1.4;
+$thickness: 3px;
+
+.hamburger {
+  display: flex;
+  width: $width;
+  height: 22.5px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: $thickness;
+    width: 50%;
+    background: $color-hamburger;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  span {
+    &:nth-child(even) {
+      border-radius: 0 $thickness $thickness 0;
+      left: 50%;
+    }
+
+    &:nth-child(odd) {
+      border-radius: $thickness 0 0 $thickness;
+      left: 0;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      top: 0;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      top: $height / 2.5;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      top: $height / 1.25;
+    }
+  }
+
+  &.open span {
+    &:nth-child(1),
+    &:nth-child(6) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2),
+    &:nth-child(5) {
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(1) {
+      left: $height / 9;
+      top: $height / 6.4;
+    }
+
+    &:nth-child(2) {
+      left: calc(50% - #{$height / 9});
+      top: $height / 6.4;
+    }
+
+    &:nth-child(3) {
+      left: -50%;
+      opacity: 0;
+    }
+
+    &:nth-child(4) {
+      left: 100%;
+      opacity: 0;
+    }
+
+    &:nth-child(5) {
+      left: $height / 9;
+      top: $height / 1.5;
+    }
+
+    &:nth-child(6) {
+      left: calc(50% - #{$height / 9});
+      top: $height / 1.5;
+    }
+  }
+}

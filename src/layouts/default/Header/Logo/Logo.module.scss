@@ -1,0 +1,13 @@
+@import 'styles/variables.scss';
+
+.logo {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: $color-black;
+  display: flex;
+
+  img {
+    height: 20px;
+  }
+}

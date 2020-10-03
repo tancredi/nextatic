@@ -1,6 +1,6 @@
 import Link from 'components/Link/Link';
 import { getGeneralSettings } from 'models/settings';
-import styles from './Logo.module.sass';
+import styles from './Logo.module.scss';
 
 export const Logo = () => {
   const { logo, brandName } = getGeneralSettings();

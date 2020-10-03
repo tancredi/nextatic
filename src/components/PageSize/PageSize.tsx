@@ -1,5 +1,5 @@
 import { ReactNode, FunctionComponent } from 'react';
-import styles from './PageSize.module.sass';
+import styles from './PageSize.module.scss';
 import classNames from 'classnames';
 
 interface Props {

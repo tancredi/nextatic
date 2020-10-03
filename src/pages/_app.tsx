@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import { Locale } from 'types/app';
 import pageContext from 'core/page-context';
 import { DEFAULT_LOCALE } from 'core/config';
-import 'styles/main.sass';
+import 'styles/main.scss';
 
 const MyApp: FunctionComponent<AppProps> = ({
   Component,
