@@ -1,4 +1,4 @@
-# Necstatic
+# Nexstatic
 
 > A static static website starter with internationalisation using Netlify CMS, Next.js, SCSS + Typescript Starter
 
@@ -48,3 +48,10 @@ As you can see from the Next.js routes in `src/pages`, most of the work is done 
 #### Models
 
 Modules exporting CMS entry types and sync getters can be found under `src/models`. They can be used as templates for new CMS entries, as long as the model matches definitions in the CMS configuration, found in `public/admin/config.yml`
+
+#### Netlify config
+
+Use the following configuration to deploy correctly on netlify:
+
+**Build command:** `npm run export`
+**Publish directory:** `dist`
