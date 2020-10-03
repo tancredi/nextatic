@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import { Locale } from 'types/app';
 import pageContext from 'core/page-context';
 import { DEFAULT_LOCALE } from 'core/config';
+import PageLoadingProgress from 'components/PageLoadingProgress/PageLoadingProgress';
 import 'styles/main.scss';
 
 const MyApp: FunctionComponent<AppProps> = ({
@@ -14,6 +15,7 @@ const MyApp: FunctionComponent<AppProps> = ({
 
   return (
     <pageContext.Provider value={{ locale }}>
+      <PageLoadingProgress />
       <Component {...pageProps} />
     </pageContext.Provider>
   );

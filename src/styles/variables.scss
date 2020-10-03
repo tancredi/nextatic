@@ -12,7 +12,12 @@ $color-text: $color-black;
 $color-page: $color-white;
 $color-link: $color-brand;
 $color-hamburger: $color-black;
+$color-mobile-nav: rgba($color-white, 0.8);
 
 // Breakpoints
 $breakpoint-tablet: 900px;
 $breakpoint-mobile: 700px;
+
+// Layers
+$z-index-nav-overlay: 10;
+$z-index-page-loading-overlay: 20;
