@@ -2,6 +2,8 @@
 
 A fully static website generator with i18n features, Netlify serverless CMS, Next.js, SCSS and Typescript.
 
+See the live demo at [nexstatic.netlify.app](https://nexstatic.netlify.app/)
+
 ### Stack
 
 - [Netlify CMS](https://www.netlifycms.org/)
