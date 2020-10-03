@@ -65,3 +65,7 @@ Use the following configuration to deploy correctly on netlify:
 
 - **Build command:** `npm run export`
 - **Publish directory:** `dist`
+
+### Contributions
+
+The project started by forking [iammary/nextjs-netlifycms-ts-starter](https://github.com/iammary/nextjs-netlifycms-ts-starter), so thanks to [@iammary](https://github.com/iammary)
