@@ -4,11 +4,10 @@ import Link from 'components/Link/Link';
 
 interface Props {
   links: NavigationLink[];
-  className?: string;
 }
 
-const NavigationLinks: FunctionComponent<Props> = ({ links, className }) => (
-  <nav className={className}>
+const NavigationLinks: FunctionComponent<Props> = ({ links }) => (
+  <>
     {links.map(({ label, page, href }, i) => {
       if (page) {
         return (
@@ -24,7 +23,7 @@ const NavigationLinks: FunctionComponent<Props> = ({ links, className }) => (
         </a>
       );
     })}
-  </nav>
+  </>
 );
 
 export default NavigationLinks;

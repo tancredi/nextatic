@@ -2,3 +2,6 @@ title: Header
 links:
   - label: About us
     page: about
+
+  - label: Contacts
+    page: contacts

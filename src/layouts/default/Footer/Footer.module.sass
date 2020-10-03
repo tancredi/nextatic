@@ -4,3 +4,30 @@
   background: $color-black
   padding: 50px 0
   color: $color-white
+
+  .inner
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+  nav
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+
+    a
+      color: $color-white
+      text-decoration: none
+      margin-left: 40px
+      transition: color .2s
+
+      &:first-child
+        margin-left: 0
+
+      &:hover
+        color: $color-link
+
+  .copy
+    opacity: .5
+    font-size: 14px

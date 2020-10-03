@@ -1,0 +1,7 @@
+title: Header
+links:
+  - label: About us
+    page: about
+
+  - label: info@mybrand.com
+    href: mailto:info@mybrand.com
