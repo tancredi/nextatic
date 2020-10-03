@@ -1,4 +1,4 @@
-<img src="content/img/logo.svg" alt="alt text" width="whatever" height="whatever" alt='Nextatic logo'>
+<img src="public/media/logo.svg" alt="alt text" height="40" alt='Nextatic logo'>
 
 > A static static website starter with internationalisation using Netlify CMS, Next.js, SCSS + Typescript Starter
 
