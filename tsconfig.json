@@ -29,7 +29,9 @@
       "layouts/*": ["src/layouts/*"],
       "types/*": ["src/types/*"],
       "utils/*": ["src/utils/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "pages/*": ["src/pages/*"],
+      "page-components/*": ["src/page-components/*"]
     },
     "typeRoots": ["./node_modules/@types", "./@types"]
   },

@@ -5,11 +5,14 @@ $font-face-base: Arial, sans-serif;
 $color-white: #fff;
 $color-black: #000;
 $color-brand: #f42561;
-$color-ruler: #f0f0f0;
+$color-gray-lighter: #f0f0f0;
+$color-gray-lightest: #f5f5f5;
 
 // Semantic colors
 $color-text: $color-black;
+$color-ruler: $color-gray-lighter;
 $color-page: $color-white;
+$color-page-alternate: $color-gray-lightest;
 $color-link: $color-brand;
 $color-hamburger: $color-black;
 $color-mobile-nav: rgba($color-white, 0.8);

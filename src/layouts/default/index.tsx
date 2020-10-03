@@ -10,9 +10,7 @@ interface Props {
 const DefaultLayout: FunctionComponent<Props> = ({ children }) => (
   <div className={styles.layout}>
     <Header />
-
     <div className={styles.content}>{children}</div>
-
     <Footer />
   </div>
 );
