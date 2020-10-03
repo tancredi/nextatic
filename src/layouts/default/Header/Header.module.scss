@@ -70,7 +70,9 @@
     &.open nav {
       opacity: 1;
       pointer-events: all;
-      background: $color-mobile-nav a {
+      background: $color-mobile-nav;
+
+      a {
         transform: translateY(0);
       }
     }
