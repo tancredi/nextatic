@@ -45,6 +45,23 @@ npm run export
 
 The admin interface will be available in `/admin` using Netlify authentication.
 
+
+### Multi-language setup
+
+By default, the boilerplate is setup in English (`en` - default) and Italian (`it`) - you can change the locales and default locale under the `i18n.locales` and `i18n.default_locale` key in `public/admin/config.yml`.
+
+The changes should be reflected immediately as `src/core/config` reads the settings directly from the CMS YAML configuration.
+
+Internalisation features on Netlify CMS are still in beta, you can read about them [here](https://deploy-preview-4139--netlify-cms-www.netlify.app/docs/beta-features/#i18n-support).
+
+In a nutshell, both collections and specific fields in the config should have a `i18n: true` attribute, which will create entries in different folders.
+
+When the models pull content in the Next.js codebase using methods exported by `utils/content`, the data will extend the default language entry and extend with values from the translated entry.
+
+After changing the `locales` option, make sure to create the `content` files in  the added languages, as they will need to be available when the staatic website builds.
+
+**Note:** (you must keep the `i18n.structure` set to `multiple_folders` as this boilerplate)
+
 ### What is it good for?
 
 This is a good setup if you're looking to tackle building a static website with some CMS requirements in at least than one language, as most of the complexity is involved in the routing and merging of content from the CMS.
