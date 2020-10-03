@@ -5,7 +5,7 @@ export const localisedStaticPathsGetter = (
   getParamSets: Object[] | (() => Promise<Object[]>),
   fallback = false
 ): GetStaticPaths => async () => {
-  const paths = [];
+  const paths: Array<{ params: any }> = [];
   const paramSets =
     typeof getParamSets === 'function' ? await getParamSets() : getParamSets;
 

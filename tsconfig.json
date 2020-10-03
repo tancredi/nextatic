@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -17,6 +18,7 @@
     "paths": {
       "content/*": ["content/*"],
       "public/*": ["public/*"],
+      "data/*": ["data/*"],
 
       "models/*": ["src/models/*"],
       "core/*": ["src/core/*"],

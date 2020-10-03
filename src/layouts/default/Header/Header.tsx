@@ -5,6 +5,7 @@ import { getNavigation } from 'models/navigation';
 import useLocale from 'hooks/useLocale';
 import Logo from './Logo/Logo';
 import NavigationLinks from 'components/NavigationLinks/NavigationLinks';
+import LanguageSelection from 'components/LanguageSelection/LanguageSelection';
 
 const Header: FunctionComponent = () => (
   <header className={styles.main}>
@@ -13,6 +14,7 @@ const Header: FunctionComponent = () => (
 
       <nav>
         <NavigationLinks links={getNavigation('header', useLocale()).links} />
+        <LanguageSelection />
       </nav>
     </PageSize>
   </header>

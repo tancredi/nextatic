@@ -1,14 +1,17 @@
 import { FunctionComponent } from 'react';
 import NextLink, { LinkProps } from 'next/link';
+import { Locale } from 'types/app';
 import useLocale from 'hooks/useLocale';
 
-type Props = LinkProps & {
+export type Props = LinkProps & {
   localised?: boolean;
+  locale?: Locale;
 };
 
 const Link: FunctionComponent<Props> = props => {
   const { href, as, localised = true } = props;
-  const locale = useLocale();
+  const currentLocale = useLocale();
+  const locale = props.locale || currentLocale;
   const overrides: Partial<Props> = {};
 
   if (localised) {

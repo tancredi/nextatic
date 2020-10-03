@@ -18,7 +18,7 @@ const NavigationLinks: FunctionComponent<Props> = ({ links }) => (
       }
 
       return (
-        <a href={href} target="_blank">
+        <a href={href} target="_blank" key={i}>
           {label}
         </a>
       );
