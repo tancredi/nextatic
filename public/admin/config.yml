@@ -5,7 +5,7 @@ media_folder: public/media
 public_folder: img
 i18n:
   structure: multiple_folders
-  locales: [en, it, es]
+  locales: [en, it]
   default_locale: en
 collections:
   - name: settings
