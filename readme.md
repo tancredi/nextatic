@@ -1,6 +1,6 @@
 <img src="public/media/logo.svg" alt="alt text" height="40" alt='Nextatic logo'>
 
-A static static website starter with internationalisation using Netlify CMS, Next.js, SCSS and Typescript
+A fully static website generator with i18n features, Netlify serverless CMS, Next.js, SCSS and Typescript.
 
 ### Stack
 
@@ -39,6 +39,10 @@ npm run export
 # The static website will be built in the `dist` folder
 ```
 
+### Edit
+
+The admin interface will be available in `/admin` using Netlify authentication.
+
 ### What is it good for?
 
 This is a good setup if you're looking to tackle building a static website with some CMS requirements in at least than one language, as most of the complexity is involved in the routing and merging of content from the CMS.
@@ -59,6 +63,5 @@ Modules exporting CMS entry types and sync getters can be found under `src/model
 
 Use the following configuration to deploy correctly on netlify:
 
-**Build command:** `npm run export`
-
-**Publish directory:** `dist`
+- **Build command:** `npm run export`
+- **Publish directory:** `dist`
