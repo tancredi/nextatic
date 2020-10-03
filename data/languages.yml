@@ -163,7 +163,7 @@ sk: { name: 'Slovak', nativeName: 'slovenčina' }
 sl: { name: 'Slovene', nativeName: 'slovenščina' }
 so: { name: 'Somali', nativeName: 'Soomaaliga, af Soomaali' }
 st: { name: 'Southern Sotho', nativeName: 'Sesotho' }
-es: { name: 'Spanish; Castilian', nativeName: 'español, castellano' }
+es: { name: 'Spanish; Castilian', nativeName: 'Español, castellano' }
 su: { name: 'Sundanese', nativeName: 'Basa Sunda' }
 sw: { name: 'Swahili', nativeName: 'Kiswahili' }
 ss: { name: 'Swati', nativeName: 'SiSwati' }
