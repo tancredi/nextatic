@@ -17,16 +17,22 @@ A static static website starter with internationalisation using Netlify CMS, Nex
 - A good starter layout with all the essentials
 - Provides basic utilities to easily extend and put in use CMS entries
 
-### Quick start
+### Setup
 
-Run the dev server
+```
+git clone git@github.com:tancredi/nextatic.git
+cd nextatic
+npm install
+```
+
+### Develop
 
 ```
 npm run dev
 # The dev server runs on http://localhost:3000 by default
 ```
 
-Built the static website
+### Build
 
 ```
 npm run export
