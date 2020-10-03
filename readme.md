@@ -45,10 +45,9 @@ npm run export
 
 The admin interface will be available in `/admin` using Netlify authentication.
 
-
 ### Multi-language setup
 
-By default, the boilerplate is setup in English (`en` - default) and Italian (`it`) - you can change the locales and default locale under the `i18n.locales` and `i18n.default_locale` key in `public/admin/config.yml`, but **make sure** to add all the directories and files for new languages to the `content` folder right after (just follow existing naming conventions), otherwise the build will break.
+By default, the boilerplate is setup in English (`en` - default) and Italian (`it`) - you can change the locales and default locale under the `i18n.locales` and `i18n.default_locale` key in `public/admin/config.yml`.
 
 The changes should be reflected immediately as `src/core/config` reads the settings directly from the CMS YAML configuration.
 
