@@ -7,20 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "npm run build && next export -o dist",
-    "lint:staged": "lint-staged"
+    "export": "npm run build && next export -o dist"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "pre-commit": "lint:staged",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -42,9 +30,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.2",
     "frontmatter-markdown-loader": "^3.6.0",
-    "husky": "^4.3.0",
     "js-yaml-loader": "^1.2.2",
-    "lint-staged": "^10.4.0",
     "lodash": "^4.17.20",
     "prettier": "^2.1.2",
     "sass": "^1.26.11",
