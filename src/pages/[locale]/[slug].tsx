@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { Locale } from 'types/app';
@@ -8,6 +8,7 @@ import { localisedStaticPathsGetter } from 'utils/page';
 import { getGeneralSettings } from 'models/settings';
 import { getPage } from 'models/pages';
 import pageComponents from 'page-components/index';
+import { useRouter } from 'next/router';
 
 interface Props {
   locale: Locale;
@@ -20,7 +21,15 @@ const Page: NextPage<Props> = ({ slug, locale }) => {
   const { basePageTitle } = getGeneralSettings();
   const { title } = attributes;
   const PageComponent = pageComponents[slug] || pageComponents.default;
+  const router = useRouter();
+  
+   useEffect(() => {
+    if (router.pathname === '/') {
+      router.push(`${locale}`);
+    }
+  }, []);
 
+  
   return (
     <>
       <Head>
